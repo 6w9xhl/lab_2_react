@@ -1,0 +1,71 @@
+/* 1. Явне керування блоковою моделлю (Box Model) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Селектор тегу */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #e9ecef; /* Цей фон перекриється внутрішнім стилем з index.html */
+}
+
+/* 3. Макет сторінки на основі Flexbox та Селектор класу */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    
+    /* Flexbox налаштування */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 4. Селектор ID */
+#main-header {
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* Селектор класу для заголовків секцій */
+.section-title {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* 5. Селектор атрибута (вибирає лише посилання на email) */
+a[href^="mailto:"] {
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 6. Псевдокласи (:hover, :focus) */
+a:hover {
+    text-decoration: underline;
+    color: #e67e22;
+}
+
+a:focus {
+    outline: 2px dashed #2980b9;
+    outline-offset: 4px;
+}
+
+/* 7. Медіазапит для вузьких екранів (адаптивність) */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    #main-header h1 {
+        font-size: 1.5rem;
+    }
+}
