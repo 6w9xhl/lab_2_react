@@ -6,7 +6,6 @@ function Education() {
       </h2>
       
       <div className="space-y-5">
-        {/* Додано hover:-translate-y-1 та hover:shadow для ефекту "підйому" картки */}
         <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-red-500/50 hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] hover:-translate-y-1 transition-all duration-300 group">
           <h3 className="font-bold text-xl text-slate-200 group-hover:text-red-400 transition-colors">Національний університет «Львівська політехніка»</h3>
           <p className="text-xs font-mono text-red-500/80 tracking-widest uppercase mb-4 mt-2">Бакалавр, «Кібербезпека» | 2025 - дотепер</p>
