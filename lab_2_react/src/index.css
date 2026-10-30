@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+/* Темна тема*/
+:root {
+  --app-bg: #050000;
+  --panel-bg: #0a0000;
+}
+
+/* Світла тема:*/
+.theme-light {
+  --app-bg: #f1f5f9;
+  --panel-bg: #ffffff;
+
+  --color-black: #f8fafc; /* фон футера, текст на червоних бейджах */
+  --color-white: #0f172a; /* заголовки */
+
+  --color-red-950: #fee2e2;
+  --color-red-900: #fecaca;
+  --color-red-800: #fca5a5;
+  --color-red-700: #b91c1c;
+  --color-red-600: #dc2626;
+  --color-red-500: #b91c1c;
+  --color-red-400: #991b1b;
+
+  --color-slate-950: #ffffff;
+  --color-slate-900: #f1f5f9;
+  --color-slate-800: #cbd5e1;
+  --color-slate-600: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-400: #475569;
+  --color-slate-200: #1e293b;
+}
+
+.theme-light .scanlines {
+  display: none;
+}

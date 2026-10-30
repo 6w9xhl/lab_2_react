@@ -10,7 +10,7 @@
     <!-- 2. Internal -->
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: var(--page-bg);
         }
     </style>
 </head>
@@ -19,8 +19,11 @@
     <div class="container">
 
         <header id="main-header">
+            <div class="header-toolbar">
+                <button type="button" id="theme-toggle" class="btn btn-outline" aria-pressed="false">Темна тема</button>
+            </div>
             <!-- 3. Inline -->
-            <h1 style="color: #2c3e50;">Кучма Христина Юріївна</h1>
+            <h1 style="color: var(--heading);">Кучма Христина Юріївна</h1>
             <p>Junior Cybersecurity Specialist | Web Penetration Tester | Python Developer</p>
             <p>
                 Львів, Україна | 098 700 37 77 | 
@@ -31,7 +34,6 @@
         
         <main>
             <section>
-                <!-- Додано клас section-title до всіх заголовків -->
                 <h2 class="section-title">Професійний профіль (Summary)</h2>
                 <p>Цілеспрямована студентка 2-го курсу спеціальності «Кібербезпека», яка активно здобуває практичний досвід у сфері наступальної безпеки. Маю практичний досвід у сфері тестування на проникнення (пошук та експлуатація вебвразливостей SQLi, XSS), проведення командних аудитів інформаційної безпеки за стандартом ISO/IEC 27001, а також розробки криптографічних алгоритмів мовою Python. Є співавтором наукової публікації з дослідження еліптичної криптографії (ECC). Володію сильними організаційними навичками завдяки досвіду на посаді старости групи. Прагну застосувати свої аналітичні здібності та технічний бекграунд для вирішення складних інженерних задач у сфері інформаційної безпеки.</p>
             </section>
@@ -107,12 +109,53 @@
                     <li>Польська — Intermediate (B1)</li>
                 </ul>
             </section>
+
+            <section id="reviews">
+                <h2 class="section-title">Відгуки попередніх роботодавців</h2>
+                <p id="reviews-status" role="status">Завантаження відгуків…</p>
+                <div id="reviews-list"></div>
+            </section>
         </main>
 
         <footer>
-            <p>Створено для Лабораторної роботи №3 (Частина 1 - CSS)</p>
+            <p>Створено для Лабораторної роботи №4 (Частина 1 - JavaScript)</p>
+
+            <div class="system-info">
+                <h3>Інформація з localStorage (ОС та браузер)</h3>
+                <dl id="storage-info" class="storage-list"></dl>
+            </div>
         </footer>
-        
+
     </div>
+
+    <!-- Модальне вікно зворотного зв'язку-->
+    <div id="contact-modal" class="modal-overlay" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <h2 id="modal-title" class="section-title">Зворотний зв’язок</h2>
+
+            <form action="https://formspree.io/f/mqppdznq" method="POST">
+                <input type="hidden" name="_subject" value="Нове повідомлення з CV (Лабораторна №4)">
+
+                <label for="contact-name">Ім’я</label>
+                <input id="contact-name" type="text" name="name" required autocomplete="name">
+
+                <label for="contact-email">Email</label>
+                <input id="contact-email" type="email" name="email" required autocomplete="email">
+
+                <label for="contact-phone">Номер телефону</label>
+                <input id="contact-phone" type="tel" name="phone" required autocomplete="tel">
+
+                <label for="contact-message">Повідомлення</label>
+                <textarea id="contact-message" name="message" rows="4" required></textarea>
+
+                <div class="modal-actions">
+                    <button type="submit" class="btn">Надіслати</button>
+                    <button type="button" id="modal-close" class="btn btn-outline">Закрити</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="p-10 border-b-2 border-red-900 relative bg-[#050000] overflow-hidden">
+    <header className="p-10 border-b-2 border-red-900 relative bg-[color:var(--app-bg)] overflow-hidden">
       {/* декоративний код на фоні */}
       <div className="absolute top-4 right-6 text-[10px] leading-tight text-red-900/40 select-none text-right font-mono hidden md:block">
         01001011 01010101<br/>
@@ -52,7 +52,7 @@ function Header() {
       </div>
 
       {/* Професійний профіль */}
-      <div className="bg-[#0a0000] border border-red-900/50 p-5 font-mono text-sm relative shadow-[inset_0_0_20px_rgba(220,38,38,0.05)]">
+      <div className="bg-[color:var(--panel-bg)] border border-red-900/50 p-5 font-mono text-sm relative shadow-[inset_0_0_20px_rgba(220,38,38,0.05)]">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-900 to-transparent"></div>
         <p className="text-red-500 font-bold mb-3 flex items-center gap-2">
           <span className="text-red-700">~</span> $ cat profile_summary.txt
